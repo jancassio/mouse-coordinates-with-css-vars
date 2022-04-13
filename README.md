@@ -10,6 +10,9 @@ For mobile devices, mouse move events are not supported yet, so you can't use th
 
 Finally, the implementation is made with Svelte, but it could be easily converted to vanilla JS.
 
+## Demo
+[Live Demo](https://mouse-coordinates-with-css-vars.vercel.app/)
+
 ## Install
 
 ```bash
