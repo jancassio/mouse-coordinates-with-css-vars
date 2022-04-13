@@ -28,7 +28,9 @@
   
   export let routes = []
 
-  let menu = routes.map(route => {
+  let menu = routes
+  .sort((a, b) => a.name === 'index' ? -1 : b.name === 'index' ? 1 : 0)
+  .map(route => {
     return {
       name: route.name
         .replace(/^\w/, c => c.toUpperCase())
@@ -44,7 +46,7 @@
 </svelte:head>
 
 <header class="fixed w-full h-auto bg-white z-50">
-  <nav>
+  <nav class="flex items-center">
     <ul class="flex space-x-6 justify-center p-4">
       {#each menu as { name, path }}
         <li>
@@ -52,6 +54,7 @@
         </li>
       {/each}
     </ul>
+    <a href="https://github.com/jancassio/mouse-coordinates-with-css-vars">Source</a>
   </nav>
 </header>
 
