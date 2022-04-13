@@ -1,38 +1,26 @@
-# create-svelte
+# Mouse Coordinates with CSS Vars
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Description
 
-## Creating a project
+This demo shows how to use CSS variables to access mouse coordinates.
 
-If you're seeing this, you've probably already done this step. Congrats!
+First and most important, mouse coordinates are not available in CSS yet, the values are provided by script. So keep in mind to have a non script support fallback.
+
+For mobile devices, mouse move events are not supported yet, so you can't use this demo on mobile devices. However, touch events are converted to mouse clicks, so mouse clicks will provide coordinates on the touch of screen.
+
+Finally, the implementation is made with Svelte, but it could be easily converted to vanilla JS.
+
+## Install
 
 ```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
+npm install
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Run
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
 
-## Building
+## License
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+MIT
